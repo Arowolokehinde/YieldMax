@@ -72,3 +72,8 @@
 (define-read-only (is-valid-token (token-id uint))
   (is-some (map-get? tokens { token-id: token-id }))
 )
+
+;; Get token information
+(define-read-only (get-token-info (token-id uint))
+  (map-get? tokens { token-id: token-id })
+)
