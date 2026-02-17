@@ -46,3 +46,11 @@
     last-price-update: uint  ;; Added timestamp for price updates
   }
 )
+
+
+;; Define balances structure
+(define-map balances
+  { holder: principal, token-id: uint }
+  { amount: uint }
+)
+
