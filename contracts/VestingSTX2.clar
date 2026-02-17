@@ -77,3 +77,8 @@
 (define-read-only (get-token-info (token-id uint))
   (map-get? tokens { token-id: token-id })
 )
+
+;; Get balance of a holder for a specific token
+(define-read-only (get-balance (holder principal) (token-id uint))
+  (default-to u0 (get amount (map-get? balances { holder: holder, token-id: token-id })))
+)
