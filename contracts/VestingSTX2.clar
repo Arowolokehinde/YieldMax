@@ -31,3 +31,18 @@
 ;; Counter for token IDs
 (define-data-var token-counter uint u0)
 (define-data-var contract-admin principal tx-sender)
+
+;;;;;;; MAP ;;;;;;;
+;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;
+;; Define the token structure
+(define-map tokens
+  { token-id: uint }
+  {
+    token-name: (string-ascii 64),
+    token-category: (string-ascii 32),
+    max-supply: uint,
+    token-price: uint,
+    last-price-update: uint  ;; Added timestamp for price updates
+  }
+)
