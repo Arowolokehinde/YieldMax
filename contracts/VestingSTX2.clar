@@ -61,3 +61,9 @@
   { allowed-amount: uint }
 )
 
+
+;; Define price history structure
+(define-map price-history
+  { token-id: uint, timestamp: uint }
+  { price: uint }
+)
