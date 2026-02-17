@@ -27,3 +27,7 @@
 (define-constant err-invalid-authorized-addr (err u111))
 (define-constant err-invalid-price-update (err u112))
 
+
+;; Counter for token IDs
+(define-data-var token-counter uint u0)
+(define-data-var contract-admin principal tx-sender)
