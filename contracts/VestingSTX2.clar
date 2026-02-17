@@ -54,3 +54,10 @@
   { amount: uint }
 )
 
+
+;; Define allowance structure
+(define-map allowances
+  { holder: principal, authorized: principal, token-id: uint }
+  { allowed-amount: uint }
+)
+
