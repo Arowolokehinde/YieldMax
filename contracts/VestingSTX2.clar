@@ -67,3 +67,8 @@
   { token-id: uint, timestamp: uint }
   { price: uint }
 )
+
+;; Function to validate token-id
+(define-read-only (is-valid-token (token-id uint))
+  (is-some (map-get? tokens { token-id: token-id }))
+)
