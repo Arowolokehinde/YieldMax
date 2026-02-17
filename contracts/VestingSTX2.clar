@@ -82,3 +82,8 @@
 (define-read-only (get-balance (holder principal) (token-id uint))
   (default-to u0 (get amount (map-get? balances { holder: holder, token-id: token-id })))
 )
+
+;; Get allowance amount
+(define-read-only (get-allowance (holder principal) (spender principal) (token-id uint))
+  (default-to u0 (get allowed-amount (map-get? allowances { holder: holder, authorized: spender, token-id: token-id })))
+)
